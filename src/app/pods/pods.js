@@ -1,6 +1,7 @@
 class PodsController {
   /** @ngInject */
   constructor($http, $interval, $filter) {
+    'ngInject';
     $http
       .get('app/pods/pods.json')
       .then(response => {

@@ -1,20 +1,20 @@
 @font-face {
 font-family: 'Segoe UI';
-src: url('/fonts/segoeui.ttf') format('truetype');
+src: url('./fonts/segoeui.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
 
 @font-face {
 font-family: 'Segoe UI';
-src: url('/fonts/segoeuib.ttf') format('truetype');
+src: url('./fonts/segoeuib.ttf') format('truetype');
 font-weight: bold;
 font-style: normal;
 }
 
 @font-face {
 font-family: 'DJB Digital';
-src: url('/fonts/DJB Get Digital.ttf') format('truetype');
+src: url('./fonts/DJB Get Digital.ttf') format('truetype');
 font-weight: bold;
 font-style: normal;
 }
@@ -27,7 +27,7 @@ html, body, #root {
 }
 
 body {
-  overflow-x:hidden;
+  min-width: 600px;
 }
 
 body, h1, h2, h3 {
@@ -301,7 +301,7 @@ restart-value {
 
 @import "/css/variables.less";
 @import "/css/gradients.less";
-@import '/css/vendor-prefixes.less';
+@import "/css/vendor-prefixes.less";
 
 .resource-value-graph {
   #gradient.vertical(#51a1d2, #056ba6);
@@ -399,6 +399,19 @@ aesthetic-well {
 }
 
 pod-resources {
+  width: 96%;
+  max-width: 96%;
+}
+
+@media (min-width: 1200px) {
+  pod-resources {
+    width: 48%;
+    max-width: 96%;
+  }  
+}
+
+
+pod-resources {
   
 transition-property: all;
 transition-duration: 2s;
@@ -407,8 +420,6 @@ transition-timing-function: @easingChild;
 
   box-sizing: border-box;
   margin: 0;
-  width: 48%;
-  max-width: 96%;
   padding: 10px;
 }
 

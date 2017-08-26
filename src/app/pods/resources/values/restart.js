@@ -1,11 +1,12 @@
 class RestartsController {
 
   constructor($sanitize) {
+    'ngInject';
     this.sanitize = $sanitize;
   }
 
   $onInit() {
-    const markup = this.value.map(el => `<li>${this.sanitize(el)}</li>`);
+    const markup = this.value.map(el => '<li>' + this.sanitize(el) + '</li>');
     this.popup = markup.join('');
   }
 

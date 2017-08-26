@@ -1,7 +1,7 @@
 import angular from 'angular';
 import nvd3Module from 'angular-nvd3';
 import 'angular-ui-bootstrap';
-import 'angular-sanitize';
+import ngSanitize from 'angular-sanitize';
 
 import {resource} from './resource';
 import {resources} from './resources';
@@ -19,7 +19,7 @@ import * as filters from './filters';
 export const resourcesModule = 'resources';
 
 angular
-  .module(resourcesModule, [nvd3Module, 'ui.bootstrap', 'ngSanitize'])
+  .module(resourcesModule, [nvd3Module, 'ui.bootstrap', ngSanitize])
   .component('podResource', resource)
   .component('podResources', resources)
   .component('statusValue', status)
