@@ -1,0 +1,27 @@
+<div class="fluid-container">
+  <div class="row">
+    <div class="col-sm-12 col-md-2">
+    <div class="mp-1 clearfix">
+       <button class="btn btn-default col-sm-12" 
+       type="button"
+       ng-click="$ctrl.addPod()">Add Process</button>
+     </div>
+     <div uib-alert
+     dismiss-on-timeout="800"
+     ng-repeat="alert in $ctrl.alerts" ng-class="['alert-' + (alert.type || 'warning'), 'my-1']"
+     close="$ctrl.removeAlert(alert.id)">{{alert.msg}}</div>
+   </div>
+   <div class="col-sm-12 col-md-10">
+    <div class="pods-container fluid-container">
+      <div class="row" dynamic-layout rankers="[['rank': 'dsc']]">
+
+        <pod-resources dynamic-layout-item class="" ng-repeat="pod in $ctrl.activePods" 
+        resources="pod.resources"
+        close="$ctrl.removePod" rank="5"></pod-resources>
+
+      </div>
+    </div>  
+  </div>
+</div>
+</div>
+

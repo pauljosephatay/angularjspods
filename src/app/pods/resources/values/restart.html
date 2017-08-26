@@ -1,0 +1,11 @@
+<div class="resource-value-restarts">
+  <span class="flex-3"><span>{{$ctrl.value.length}}</span></span>
+  
+    <a href="#" 
+    ng-if="$ctrl.hasRestarts()"
+    uib-tooltip-html="'{{$ctrl.popup}}'"
+    tooltip-placement="bottom"
+    tooltip-trigger="'click'"
+    ><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+  
+</div>

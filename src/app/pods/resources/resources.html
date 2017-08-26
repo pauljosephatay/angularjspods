@@ -1,0 +1,53 @@
+<div class="resources-container">
+ <div class="panel panel-default">
+  <div class="panel-heading panel-heading-fd clearfix">
+    <span class="panel-title panel-title-fd">Process <span>{{$ctrl.resources.id}}</span></span>
+    <div class="btn-group pull-right">
+    <button type="button" class="close resources-close" 
+      aria-label="Close"
+      ng-click="$ctrl.closePod()"><span aria-hidden="true">&times;</span></button>
+    </div>
+  </div>
+  <div class="panel-body panel-body-fd container-fluid">
+
+    <div class="row no-gutter">
+      <div class="col-xs-3 resources">
+
+        <pod-resource title="CPU %" class="resource-inverse pod-resource-divider-last" >
+          <cpu-value value="$ctrl.resources.cpu"></cpu-value>
+        </pod-resource>
+      </div>
+      <div class="col-xs-9 resources">   
+        <graph-value value="$ctrl.resources.cpu"></graph-value>
+      </div>
+    </div>  
+
+
+    <div class="row no-gutter">
+      <div class="col-xs-3 resources">
+        <pod-resource title="Status" class="pod-resource-divider">
+          <status-value value="$ctrl.resources.status"></status-value>
+        </pod-resource>
+      </div>
+
+      <div class=" col-xs-9 resources">
+
+        <pod-resource title="Instances" class="pod-resource-divider">
+          <instances-value value="$ctrl.resources.instances"></instances-value>
+        </pod-resource>
+        <pod-resource title="Memory MB" class=" pod-resource-divider">
+          <memory-value value="$ctrl.resources.memory"></memory-value>
+        </pod-resource>
+        <pod-resource title="Up Time" class=" pod-resource-divider flex-6">
+          <uptime-value value="$ctrl.resources.upTime"></uptime-value>
+        </pod-resource>
+        <pod-resource title="Restarts" class="pod-resource-divider-last">
+          <restart-value value="$ctrl.resources.restarts" id="$ctrl.id"></restart-value>
+        </pod-resource>
+
+
+      </div>
+    </div>
+  </div>
+</div> 
+</div>
