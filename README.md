@@ -6,4 +6,6 @@
 -	Real time data update is simulated using angular interval. 
 -	To help ensure clean coding and best standards, eslint loader is used in development.
 
+This application was generated with [Yeoman](http://yeoman.io).
+
 Published at https://pauljosephatay.github.io/angularjspods/
